@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.title {
+  width: 540px;
+  height: 63px;
+  top: 40px;
+  left: 285px;
+  gap: 0px;
+  opacity: 0px;
+  font-family: Roboto;
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 65.63px;
+  letter-spacing: -0.004em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #75b79e;
+}
+body {
+  width: 1110px;
+  height: 300px;
+  opacity: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #eef9bf;
+}
+
+.content {
+  width: 1000px;
+  height: 300px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  perspective: 1000px;
+}
+
+.card {
+  width: 117px;
+  height: 149px;
+  margin: 5px;
+  position: relative;
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  border: 1px solid #99cea8;
+  border-radius: 10px;
+}
+
+.card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  position: absolute;
+  border-radius: 5px;
+  background: #a7e9af;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
