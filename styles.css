@@ -84,7 +84,15 @@ top: 40px;
 left: 12px;
 gap: 0px;
 opacity: 0px;
+font-family: Roboto;
+font-size: 36px;
+font-weight: 700;
+line-height: 42.19px;
+letter-spacing: -0.004em;
 text-align: center;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
     
   }
 
