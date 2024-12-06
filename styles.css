@@ -57,7 +57,7 @@ body {
   transition: transform 0.2s;
 }
 
-.card.flip {
+.card.virar {
   transform: rotateY(180deg);
 }
 
@@ -74,4 +74,18 @@ body {
 
 .front-face {
   transform: rotateY(180deg);
+}
+
+@media (max-width:614px){
+  .title {
+    width: 312px;
+height: 63px;
+top: 40px;
+left: 12px;
+gap: 0px;
+opacity: 0px;
+text-align: center;
+    
+  }
+
 }

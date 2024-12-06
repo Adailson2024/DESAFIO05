@@ -1,61 +1,61 @@
-const cards = document.querySelectorAll(".card");
+const cartas = document.querySelectorAll(".card");
 
 let hasFlippedCard = false;
 let lockBoard = false;
-let firstCard, secondCard;
+let carta1, carta2;
 
 
-function flipCard() {
+function virarCartas() {
   if (lockBoard) return;
-  if (this === firstCard) return;
+  if (this === carta1) return;
 
-  this.classList.add("flip");
+  this.classList.add("virar");
 
   if (!hasFlippedCard) {
     hasFlippedCard = true;
-    firstCard = this;
+    carta1 = this;
 
     return;
   }
 
-  secondCard = this;
-  checkForMatch();
+  carta2 = this;
+  comparadorCartas();
 }
 
-function checkForMatch() {
-  let isMatch = firstCard.dataset.framework === secondCard.dataset.framework;
+function comparadorCartas() {
+  let correspondencia = carta1.dataset.framework === carta2.dataset.framework;
 
-  isMatch ? disableCards() : unflipCards();
+  correspondencia ? desabilitarCartas() : desvirarCartas();
 }
 
-function disableCards() {
-  firstCard.removeEventListener("click", flipCard);
-  secondCard.removeEventListener("click", flipCard);
+function desabilitarCartas() {
+  carta1.removeEventListener("click", virarCartas);
+  carta2.removeEventListener("click", virarCartas);
 
   resetBoard();
 }
 
-function unflipCards() {
+function desvirarCartas() {
   lockBoard = true;
 
   setTimeout(() => {
-    firstCard.classList.remove("flip");
-    secondCard.classList.remove("flip");
+    carta1.classList.remove("virar");
+    carta2.classList.remove("virar");
 
-    resetBoard();
-  }, 1500);
+    redefiniçãoCartas();
+  }, 1000);
 }
 
-function resetBoard() {
+function redefiniçãoCartas() {
   [hasFlippedCard, lockBoard] = [false, false];
-  [firstCard, secondCard] = [null, null];
+  [carta1, carta2] = [null, null];
 }
 
-(function shuffle() {
-  cards.forEach((card) => {
+(function embaralhar() {
+  cartas.forEach((card) => {
     let randomPos = Math.floor(Math.random() * 14);
     card.style.order = randomPos;
   });
 })();
 
-cards.forEach((card) => card.addEventListener("click", flipCard));
+cartas.forEach((card) => card.addEventListener("click", virarCartas));
