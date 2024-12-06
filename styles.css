@@ -106,6 +106,7 @@ height: 629px;
 top: -315px;
 left: 411px;
 gap: 0px;
+flex-wrap: wrap;
 opacity: 0px;
 margin-left: 110px;
 margin-top: 40px;
@@ -115,7 +116,7 @@ margin-top: 40px;
     width: 335px;
     height: 629px;
     opacity: 0px;
-    
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     background: #eef9bf;
