@@ -32,7 +32,7 @@ function desabilitarCartas() {
   carta1.removeEventListener("click", virarCartas);
   carta2.removeEventListener("click", virarCartas);
 
-  resetBoard();
+  redefiniçãoCartas();
 }
 
 function desvirarCartas() {
