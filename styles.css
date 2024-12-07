@@ -19,7 +19,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #75b79e;
-  margin-left: 300px;
+  margin-left: 400px;
 margin-top: 30px;
 }
 body {
@@ -39,7 +39,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   perspective: 1000px;
-  margin-left: 130px;
+  margin-left: 230px;
 margin-top: 30px;
 }
 
