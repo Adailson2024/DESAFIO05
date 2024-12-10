@@ -100,7 +100,7 @@ margin-left: 90px;
 margin-top: 30px;
     
   }
-  .content {
+.content {
     width: 335px;
 height: 629px;
 top: -315px;
@@ -118,6 +118,8 @@ margin-top: 40px;
     opacity: 0px;
     flex-wrap: wrap;
     flex-direction: column;
+    display: flex;
+    align-content: center;
     align-items: center;
     background: #eef9bf;
   }
